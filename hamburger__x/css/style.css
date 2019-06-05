@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  position: relative;
+}
+
+.hamburger {
+  position: relative;
+}
+
+.border {
+  position: absolute;
+  background-color: #fff;
+  display: block;
+  width: 35px;
+  height: 5px;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  transition: all 1s ease-in-out;
+  transform: rotate(0deg);
+}
+
+.hamburger__top {
+  transform: translateY(10px);
+}
+
+.hamburger__middle {
+  opacity: 1;
+}
+
+.hamburger__bottom {
+  transform: translateY(-10px);
+}
+
+.hamburger__top.cliked {
+  transform: translateY(0) rotate(45deg);
+}
+
+.hamburger__bottom.cliked {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.hamburger__middle.cliked {
+  opacity: 0;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 5;
+  width: 100vw;
+  height: 10vw;
+  background-color: #000;
+  color: #fff;
+}

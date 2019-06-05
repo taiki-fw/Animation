@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Hamburger_menu_x</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="header__menu">
+        <li class="logo">HamburgerMenu</li>
+        <li id="js-menu-icn" class="hamburger">
+          <span class="border hamburger__top"></span>
+          <span class="border hamburger__middle"></span>
+          <span class="border hamburger__bottom"></span>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    var menu = document.getElementById('js-menu-icn');
+    var border = menu.children;
+    menu.addEventListener('click', function() {
+       for(var i = 0; i < border.length; i++) {
+         border[i].classList.toggle('cliked');
+       }
+    });
+  </script>
+</body>
+</html>

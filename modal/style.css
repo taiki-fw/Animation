@@ -66,12 +66,6 @@ main {
   background-color: #fff;
 }
 
-.modal__title {
-  position: relative;
-  width: 80%;
-  margin: auto;
-}
-
 .close {
   position: absolute;
   top: 0;

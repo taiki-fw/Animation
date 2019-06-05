@@ -1,0 +1,62 @@
+//使用カラーコード
+$list-color: #a9a9a9;
+
+//breakポイント
+$sp: 480px;
+
+@mixin sp {
+  @media screen and (max-width: $sp) {
+    @content;
+  }
+}
+
+//リセットcss
+body {
+  background-color: #232f3e;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 2em;
+}
+
+#sp--menu--block {
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  transition: 0.6s;
+  height: 100vh;
+  width: 100vw;
+  &.active {
+    z-index: 3;
+    background: rgba(89, 146, 216, 0.5);
+    nav {
+      transition: 0.5s;
+      transform: translateX(0);
+    }
+  }
+  nav {
+    @include sp {
+      transform: translateX(-100vw);
+      transition: 1s;
+      width: 70vw;
+      background: #fff;
+      ul{
+        margin-bottom: 0;
+        .sample__text--top {
+          color: $list-color;
+        }
+      }
+      ul:not(:first-child) {
+        margin-top: 0;
+      }
+    }
+  }
+}
